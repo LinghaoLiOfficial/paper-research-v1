@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 提示 */
+.cTip {
+    @apply pl-4 italic text-neutral_color_5 text-xs tracking-widest;
+}
+
+/* 参数表 */
+.cParamsTable {
+    @apply grid grid-cols-5 mt-2;
+}
+
+/* 子区块标题 */
+.cSubBlockTitle {
+    @apply pb-2 text-sm font-SiyuanHei-Regular text-neutral_color_3;
+}
+
+/* 子区块 */
+.cSubBlock {
+    @apply w-72 flex flex-col border border-slate-300 shadow-sm p-3 rounded-xl;
+}
+
+/* 母区块行 */
+.cBlockRow {
+    @apply  flex flex-row space-x-4;
+}
+
+/* 母区块列 */
+.cBlockCol {
+    @apply  flex flex-col space-y-4;
+}
+
+/* 母区块标题 */
+.cBlockTitle {
+    @apply pb-4 text-sm font-SiyuanHei-Regular text-neutral_color_3;
+}
+
+/* 侧边母区块 */
+.cBlockSide {
+    @apply w-80 flex flex-col border border-slate-300 shadow-sm p-3 rounded-xl;
+}
+
+/* 母区块 */
+.cBlock {
+    @apply w-full flex flex-col border border-slate-300 shadow-sm p-3 rounded-xl;
+}
+
+/* 纵向页面 */
+.cColPage {
+    @apply h-full w-full flex flex-col space-y-4 p-4;
+}
+
+/* 横向页面 */
+.cRowPage {
+    @apply h-full w-full flex flex-row space-x-4 p-4;
+}
+
+.loginBackground {
+    background-image: url('./assets/img/login_background.jpg');
+    background-size: 100% 100%;
+}
+
+.reverseLoginBackground {
+    background-image: url('./assets/img/reverse_login_background.jpg');
+    background-size: 100% 100%;
+}
+
+.backgroundNoise {
+    background-image: url('./assets/img/noise.png');
+    background-size: 100% 100%;
+    opacity: 0.1;
+}
+
+.logo {
+    background-image: url('./assets/img/logo.png');
+    background-size: 100% 100%;
+}
+
+/* 隐藏全局滚动条 */
+body {
+    overflow: hidden;
+  }
+
+/* 自定义加载样式 */
+.custom-loading {
+position: relative;
+min-height: 200px; /* 设置一个最小高度，确保加载区域有足够空间 */
+}
+
+/* 调整加载圆圈和文字的位置 */
+.custom-loading /deep/ .el-loading-spinner {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); /* 居中 */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.custom-loading /deep/ .el-loading-spinner .el-icon-loading {
+font-size: 60px; /* 调整加载图标大小 */
+margin-bottom: 10px; /* 调整图标和文字之间的间距 */
+}
+
+.custom-loading /deep/ .el-loading-text {
+font-size: 24px; /* 调整文字大小 */
+}
+
+/* 禁用加载动画并设置纯白背景 */
+.custom-loading /deep/ .el-loading-mask {
+transition: none !important; /* 禁用过渡效果 */
+opacity: 1 !important; /* 直接显示，不淡入 */
+background-color: white !important; /* 设置背景为纯白色 */
+}
+
+/* 字体样式(已压缩) */
+
+@font-face {
+    font-family: 'SiYuanHei-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SiYuanHei-Bold'), url('./assets/font/SiYuanHei-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SiyuanHei-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SiyuanHei-Regular'), url('./assets/font/SiyuanHei-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Georgia-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Regular'), url('./assets/font/georgia.woff') format('woff');
+}
+      
+@font-face {
+    font-family: 'Georgia-Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Italic'), url('./assets/font/georgiai.woff') format('woff');
+}
+     
+@font-face {
+    font-family: 'Georgia-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Bold'), url('./assets/font/georgiab.woff') format('woff');
+}     
+    
+@font-face {
+    font-family: 'Georgia-Bold-Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Georgia Bold Italic'), url('./assets/font/georgiaz.woff') format('woff');
+}
